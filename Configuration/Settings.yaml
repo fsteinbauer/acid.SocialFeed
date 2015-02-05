@@ -1,0 +1,29 @@
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'TYPO3.TypoScript': TRUE
+        'TYPO3.Neos': TRUE
+
+acid:
+  SocialFeed:
+    View:
+      showVideosInOverlay: FALSE   
+    enabledProvider: ['Facebook']
+    Provider:
+      Facebook:
+        autoHide: FALSE
+        users: 
+          - 'zuck'
+        appId: 123456789
+        appSecret: 000appsecret1234
+        accessToken: 000accessToken123456
+    
+      Twitter:
+        autoHide: TRUE
+        user: asdfdd
+        secret: dde 
+      Instagram:
+      
+
+

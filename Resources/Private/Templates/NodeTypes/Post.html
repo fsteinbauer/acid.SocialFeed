@@ -1,0 +1,39 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+
+<div class="social-post asset-{assetType} col-md-{f:if(condition: '{iteration.index} == 0', then: '6', else: '3')} col-lg-{f:if(condition: '{iteration.index} == 0', then: '4', else: '2')} {f:if(condition: '{showVideosInOverlay} == 'TRUE', then: 'fancybox')}" <f:if condition="{assetImage}">style="background-image: url({assetImage})"</f:if> 
+<f:switch expression="{assetType}">
+	<f:case value="fb_video">data-link="https://www.facebook.com/video/embed?video_id={assetUrl}"</f:case>
+	<f:case value="yt_video">data-link="http://www.youtube.com/embed/{assetUrl}?autoplay=1&amp;showinfo=0"</f:case>
+</f:switch>
+<f:if condition="{link}">onclick="window.open('{link}')"</f:if>
+>
+	<div class="content">
+		<div class="headline">
+			<h4><img src="{f:uri.resource(path: '{socialIcon}', package: 'acid.JCwebsite')}" /> {author}</h4>
+			<date><f:format.date format="d.m.Y">{date}</f:format.date></date>
+		</div>
+		<div class="story">{story}</div>
+	</div>
+	<paper-ripple fit></paper-ripple>
+</div>
+
+
+<f:if condition="{iteration.index} == 4">
+<!-- Follow us Box -->
+<div class="social-post follow-us col-md-3 col-lg-2">
+	<div class="content">
+		<p>Follow<br/>us on</p>
+		<ul>
+			<li><a href="#" class="facebook"> </a></li>
+			<li><a href="#" class="twitter"> </a></li>
+			<li><a href="#" class="linkedin"> </a></li>
+			<li><a href="#" class="instagram"> </a></li>
+			<li><a href="#" class="vimeo"> </a></li>
+			<li><a href="#" class="youtube"> </a></li>
+		</ul>
+	</div>
+</div>
+<!-- / Follow us Box -->
+</f:if>

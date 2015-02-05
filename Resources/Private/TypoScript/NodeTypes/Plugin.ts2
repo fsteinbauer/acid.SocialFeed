@@ -1,0 +1,13 @@
+prototype(Site:Plugin) {
+
+	entries = ContentCollection {
+		nodePath = 'entries'
+		iterationName = 'postIteration'
+	}
+
+
+	prototype(Site:Post) {
+		// Render images in the carousel with a special template.
+		iteration = ${postIteration}
+	}
+}

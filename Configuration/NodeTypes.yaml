@@ -1,0 +1,27 @@
+'acid.SocialFeed:Plugin':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    label: 'Social Feed'
+    group: 'plugins'
+  childNodes:
+    entries:
+      type: 'TYPO3.Neos:ContentCollection'
+
+'acid.SocialFeed:Post':
+  superTypes: ['TYPO3.Neos:Content']
+  properties:
+    date:
+      type: date
+      default: now
+    originalID:
+      type: string
+    provider:
+      type: string
+    story:
+      type: string
+    assetType:
+      type: string
+    assetImage:
+      type: string
+    assetExra:
+      type: string

@@ -1,0 +1,14 @@
+prototype(Site:Post) {
+	provider = ${q(node).property('provider')}
+	story = ${q(node).property('story')}
+	link = ${q(node).property('link')}
+	author = ${q(node).property('author')}
+	socialIcon = ${'Images/SocialIcons/'+q(node).property('provider')+'.png'}
+
+	assetType = ${q(node).property('assetType')}
+	assetImage = ${q(node).property('assetImage')}
+	assetUrl = ${q(node).property('asset')}
+
+	showVideosInOverlay = ${Configuration.setting('acid.SocialFeed.View.showVideosInOverlay')}
+
+}
