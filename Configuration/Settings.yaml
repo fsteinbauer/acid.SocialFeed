@@ -4,6 +4,13 @@ TYPO3:
       autoInclude:
         'TYPO3.TypoScript': TRUE
         'TYPO3.Neos': TRUE
+  Flow:
+    reflection:
+      ignoredTags:
+       - returns
+    object:
+      excludeClasses:
+        'facebook.*': ['.*']
 
 acid:
   SocialFeed:
